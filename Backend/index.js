@@ -3,10 +3,10 @@ const path = require('path');
 const cors = require('cors');
 const { processInvoice } = require('./FileProcessor.js');
 const { upload } = require('./middlewares/multer.middleware.js')
-const { uploadOnCloudinary } = require("./utils/cloudinary.js")
+// const { uploadOnCloudinary } = require("./utils/cloudinary.js")
 
 const app = express();
-app.use(cors())
+app.use(cors({ origin: '*' }))
 
 app.get('/', (req, res) => {
   res.send('Backend is running!');
