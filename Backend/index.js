@@ -8,6 +8,11 @@ const { uploadOnCloudinary } = require("./utils/cloudinary.js")
 const app = express();
 app.use(cors())
 
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
+
+
 // API endpoint to handle file uploads
 app.post('/upload', 
   upload.fields([                 // middleware
