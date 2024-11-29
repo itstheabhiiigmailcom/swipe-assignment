@@ -6,7 +6,11 @@ const { upload } = require('./middlewares/multer.middleware.js')
 // const { uploadOnCloudinary } = require("./utils/cloudinary.js")
 
 const app = express();
-app.use(cors({ origin: '*' }))
+app.use(cors({
+  origin: 'https://swipe-assignment-n7mr5l7fi-abhishek-kumars-projects-7905b109.vercel.app', // Allow this specific origin
+  methods: ['GET', 'POST'], // Specify allowed HTTP methods
+  credentials: true // Allow cookies or credentials to be sent
+}));
 
 app.get('/', (req, res) => {
   res.send('Backend is running!');
