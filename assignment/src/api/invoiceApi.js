@@ -1,4 +1,5 @@
 import axios from 'axios';
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 export const uploadFilesAndFetchData = async (files) => {
   const formData = new FormData();
@@ -7,7 +8,7 @@ export const uploadFilesAndFetchData = async (files) => {
   });
 
   try {
-    const response = await axios.post('http://localhost:5000/upload', formData, {
+    const response = await axios.post(`${SERVER_URL}/upload`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
