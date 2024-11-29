@@ -11,6 +11,7 @@ const corsOptions = {
   origin: 'https://swipe-assignment-woad.vercel.app', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  credentials: true, // Allow cookies or credentials
 };
 // Apply CORS middleware
 app.use(cors(corsOptions));
