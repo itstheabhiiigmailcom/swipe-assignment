@@ -8,7 +8,7 @@ const { upload } = require('./middlewares/multer.middleware.js')
 const app = express();
 // Allow requests from the frontend domain
 const corsOptions = {
-  origin: 'https://swipe-assignment-n7mr5l7fi.vercel.app', // Replace with your frontend URL
+  origin: 'https://swipe-assignment-woad.vercel.app', // Replace with your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
 };
